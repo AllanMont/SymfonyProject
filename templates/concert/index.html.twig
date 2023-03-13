@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Concert index{% endblock %}
+
+{% block body %}
+    <h1>Concert index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Capacite</th>
+                <th>IdArtiste</th>
+                <th>IdSalle</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for concert in concerts %}
+            <tr>
+                <td>{{ concert.id }}</td>
+                <td>{{ concert.date ? concert.date|date('Y-m-d') : '' }}</td>
+                <td>{{ concert.capacite }}</td>
+                <td>{{ concert.idArtiste }}</td>
+                <td>{{ concert.idSalle }}</td>
+                <td>
+                    <a href="{{ path('app_concert_show', {'id': concert.id}) }}">show</a>
+                    <a href="{{ path('app_concert_edit', {'id': concert.id}) }}">edit</a>
+                    <a href="{{ path('app_concert_delete', {'id': concert.id}) }}">delete</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_concert_new') }}">Create new</a>
+{% endblock %}
