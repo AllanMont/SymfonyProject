@@ -25,9 +25,9 @@ class Review
 
     #[ORM\Column(nullable: true)]
     private ?int $note = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?int $description = null;
+    
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $description = null;
 
     #[ORM\Column]
     #[OneToOne(targetEntity: Booking::class)]

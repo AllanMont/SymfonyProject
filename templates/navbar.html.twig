@@ -1,20 +1,44 @@
-<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand"><img src="/public/logo.png" alt="logo"></a>
-        </div>
-        <div class="">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="/~montagnea/Symfony/checksf/concertProject/public">Home</a></li>
-                <li class="active"><a href="/~montagnea/Symfony/checksf/concertProject/public/artist/">Artist</a></li>
-                <li class="active"><a href="/~montagnea/Symfony/checksf/concertProject/public/concert/">Concerts</a></li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="/SymfonyProject/public/">Concert Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto" style="margin-left: auto;">
+            <li class="nav-item active">
+                <a class="nav-link" href="/SymfonyProject/public/artist/">Artist</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/SymfonyProject/public/concert/">Concerts</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/SymfonyProject/public/booking/">Booking</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/SymfonyProject/public/favorite/">Favorites</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/SymfonyProject/public/salle/">Salle</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/SymfonyProject/public/review/">Review</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+        <a href="{{ path('app_account_edit') }}">Edit account</a>
+                        <li class="nav-item">
+                <a class="nav-link" href="/SymfonyProject/public/logout">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/SymfonyProject/public/profile">Profile</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/SymfonyProject/public/sign-in">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/SymfonyProject/public/register">Register</a>
+            </li>
+        </ul>
     </div>
-</header>
+</nav>
